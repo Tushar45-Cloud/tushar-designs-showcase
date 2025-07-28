@@ -25,7 +25,7 @@ const PortfolioSection = () => {
     },
     {
       id: 2,
-      title: 'Banking Mobile App',
+      title: 'E Commers Website',
       category: 'mobile',
       image: portfolioMobile,
       description: 'Intuitive banking app with focus on security and usability',
@@ -41,7 +41,7 @@ const PortfolioSection = () => {
     },
     {
       id: 4,
-      title: 'SaaS Dashboard',
+      title: 'Hotel management App and admin Dashboard',
       category: 'web',
       image: portfolioWeb,
       description: 'Analytics dashboard with complex data visualization',
