@@ -19,7 +19,7 @@ const PortfolioSection = () => {
       id: 1,
       title: 'Laundry Service Website',
       category: 'web',
-      image: portfolioWeb,
+      image: '/lovable-uploads/94f34cc6-4dea-49de-8f7f-b1f12746339c.png',
       description: 'Modern Website platform with clean UI and seamless user experience',
       tools: ['Figma', 'Prototyping', 'User Research'],
     },
