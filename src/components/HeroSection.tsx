@@ -1,6 +1,36 @@
 import { ArrowDown, Download, Eye } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { createWhiteBackground, loadImage } from '@/utils/backgroundRemoval';
 
 const HeroSection = () => {
+  const [processedImageUrl, setProcessedImageUrl] = useState<string>('/lovable-uploads/ed402eae-b96c-42b7-9a8e-10fece6d48e1.png');
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  useEffect(() => {
+    const processImage = async () => {
+      try {
+        setIsProcessing(true);
+        const img = await loadImage('/lovable-uploads/ed402eae-b96c-42b7-9a8e-10fece6d48e1.png');
+        const blob = await createWhiteBackground(img);
+        const url = URL.createObjectURL(blob);
+        setProcessedImageUrl(url);
+      } catch (error) {
+        console.error('Failed to process image:', error);
+        // Keep original image on error
+      } finally {
+        setIsProcessing(false);
+      }
+    };
+
+    processImage();
+
+    // Cleanup function
+    return () => {
+      if (processedImageUrl && processedImageUrl.startsWith('blob:')) {
+        URL.revokeObjectURL(processedImageUrl);
+      }
+    };
+  }, []);
   return (
     <section className="portfolio-section bg-gradient-to-br from-background to-muted min-h-screen flex items-center">
       <div className="container mx-auto px-6 lg:px-8">
@@ -9,9 +39,10 @@ const HeroSection = () => {
           <div className="mb-8">
             <div className="w-32 h-32 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-lg">
               <img 
-                src="/lovable-uploads/ed402eae-b96c-42b7-9a8e-10fece6d48e1.png" 
+                src={processedImageUrl} 
                 alt="Tushar Bansode"
                 className="w-full h-full object-cover"
+                style={{ opacity: isProcessing ? 0.7 : 1 }}
               />
             </div>
           </div>
