@@ -17,7 +17,7 @@ const PortfolioSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
+      title: 'Laundry Service Website',
       category: 'web',
       image: portfolioWeb,
       description: 'Modern e-commerce platform with clean UI and seamless user experience',
