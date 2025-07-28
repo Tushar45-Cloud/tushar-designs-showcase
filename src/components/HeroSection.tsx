@@ -9,7 +9,7 @@ const HeroSection = () => {
           <div className="mb-8">
             <div className="w-32 h-32 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-lg">
               <img 
-                src="/src/assets/tushar-photo.jpg" 
+                src="/lovable-uploads/ed402eae-b96c-42b7-9a8e-10fece6d48e1.png" 
                 alt="Tushar Bansode"
                 className="w-full h-full object-cover"
               />
