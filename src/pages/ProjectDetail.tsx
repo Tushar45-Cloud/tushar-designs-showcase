@@ -125,6 +125,9 @@ const ProjectDetail = () => {
                 The development process involved extensive research, prototyping, and iterative 
                 design to create an optimal user experience.
               </p>
+            <a href="https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=158-833&t=dtBjesPxfTNEpT3y-1
+"></a>    
+
             </div>
           </div>
         </div>
