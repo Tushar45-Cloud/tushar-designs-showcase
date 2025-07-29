@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ExternalLink, Monitor, Smartphone, Palette } from 'lucide-react';
 import portfolioWeb from '@/assets/portfolio-web-1.jpg';
 import portfolioMobile from '@/assets/portfolio-mobile-1.jpg';
@@ -6,6 +7,7 @@ import portfolioLogos from '@/assets/portfolio-logos-1.jpg';
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState('all');
+  const navigate = useNavigate();
 
   const categories = [
     { id: 'all', name: 'All Projects', icon: <Monitor size={20} /> },
@@ -102,7 +104,11 @@ const PortfolioSection = () => {
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
-              <div key={project.id} className="portfolio-card group overflow-hidden">
+              <div 
+                key={project.id} 
+                className="portfolio-card group overflow-hidden cursor-pointer"
+                onClick={() => navigate(`/project/${project.id}`)}
+              >
                 <div className="relative overflow-hidden rounded-lg mb-4">
                   <img
                     src={project.image}
