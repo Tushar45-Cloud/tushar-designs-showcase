@@ -133,6 +133,14 @@ const ProjectDetail = () => {
               >
                 View Design on Figma →
               </a>
+              <a 
+                href="https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=452-156&t=cu79RZJpQb4dxeS3-1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-primary hover:text-primary/80 font-medium underline underline-offset-4 mt-2"
+              >
+                View Additional Design →
+              </a>
 
             </div>
           </div>
