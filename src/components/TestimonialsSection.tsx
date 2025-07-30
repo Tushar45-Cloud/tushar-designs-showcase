@@ -4,31 +4,24 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Sarah Johnson',
+      name: 'Ajinkya Dhormale',
       role: 'Product Manager',
-      company: 'TechCorp',
+      company: 'Washly',
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612e738?w=400&h=400&fit=crop&crop=face',
       rating: 5,
       text: 'Tushar delivered exceptional UI/UX design for our mobile app. His attention to detail and user-centered approach resulted in a 40% increase in user engagement.',
     },
     {
       id: 2,
-      name: 'Michael Chen',
+      name: 'Nilesh Marathe',
       role: 'CEO',
-      company: 'StartupXYZ',
+      company: 'Freelancer',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
       rating: 5,
       text: 'Working with Tushar was a game-changer for our business. He transformed our complex ideas into beautiful, intuitive designs that our users love.',
     },
-    {
-      id: 3,
-      name: 'Emily Rodriguez',
-      role: 'Marketing Director',
-      company: 'GrowthLab',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face',
-      rating: 5,
-      text: 'The landing pages Tushar designed exceeded our expectations. The conversion rate improved by 60% after implementing his designs. Highly recommended!',
-    },
+    
+ 
   ];
 
   return (
@@ -63,6 +56,26 @@ const TestimonialsSection = () => {
                 <div className="flex items-center gap-4">
                   <img
                     src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                  <div>
+                    <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
+                    <p className="text-sm text-muted-foreground">
+                      {testimonial.role} at {testimonial.company}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TestimonialsSection;
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full object-cover"
                   />
