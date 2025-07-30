@@ -83,48 +83,7 @@ const projects = [
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
-              <div
-                key={project.id}
-                className="portfolio-card group overflow-hidden"
-              >
-                <div className="relative overflow-hidden rounded-lg mb-4">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <a
-                      href={project.workLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white text-black px-4 py-2 rounded-lg flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
-                      onClick={e => e.stopPropagation()} // Prevents card click from navigating away
-                    >
-                      <ExternalLink size={16} />
-                      View Work
-                    </a>
-                  </div>
-                </div>
-
-                <h3 className="font-semibold text-foreground mb-2">{project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.tools.map((tool, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-muted text-muted-foreground text-xs rounded-full"
-                    >
-                      {tool}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+             
     </section>
   );
 };
