@@ -61,13 +61,13 @@ const PortfolioSection = () => {
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <section id="portfolio" className="portfolio-section bg-muted/30">
+   <section id="portfolio" className="portfolio-section bg-muted/30">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="portfolio-heading">My Work</h2>
             <p className="portfolio-text max-w-2xl mx-auto">
-              Explore my latest projects showcasing user-centered design solutions 
+              Explore my latest projects showcasing user-centered design solutions
               across web, mobile, and branding.
             </p>
           </div>
@@ -78,11 +78,10 @@ const PortfolioSection = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${
-                  activeCategory === category.id
-                    ? 'bg-primary text-primary-foreground shadow-md'
-                    : 'bg-card text-muted-foreground hover:bg-accent hover:text-accent-foreground'
-                }`}
+                className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${activeCategory === category.id
+                  ? 'bg-primary text-primary-foreground shadow-md'
+                  : 'bg-card text-muted-foreground hover:bg-accent hover:text-accent-foreground'
+                  }`}
               >
                 {category.icon}
                 {category.name}
@@ -93,10 +92,9 @@ const PortfolioSection = () => {
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
-              <div 
-                key={project.id} 
-                className="portfolio-card group overflow-hidden cursor-pointer"
-                onClick={() => navigate(`/project/${project.id}`)}
+              <div
+                key={project.id}
+                className="portfolio-card group overflow-hidden"
               >
                 <div className="relative overflow-hidden rounded-lg mb-4">
                   <img
@@ -105,16 +103,22 @@ const PortfolioSection = () => {
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <button className="bg-white text-black px-4 py-2 rounded-lg flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <a
+                      href={project.workLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white text-black px-4 py-2 rounded-lg flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                      onClick={e => e.stopPropagation()} // Prevents card click from navigating away
+                    >
                       <ExternalLink size={16} />
-                      View Case Study
-                    </button>
+                      View Work
+                    </a>
                   </div>
                 </div>
-                
+
                 <h3 className="font-semibold text-foreground mb-2">{project.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2">
                   {project.tools.map((tool, index) => (
                     <span
@@ -133,5 +137,6 @@ const PortfolioSection = () => {
     </section>
   );
 };
+
 
 export default PortfolioSection;
