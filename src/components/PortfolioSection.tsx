@@ -82,7 +82,19 @@ const projects = [
 
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
+          {filteredProjects.map((project) => (
+  <div
+    key={project.id}
+    className="portfolio-card cursor-pointer transition-transform hover:scale-105"
+    onClick={() => window.open(project.workLink, '_blank')}
+  >
+    {/* Card content: image, title, description, etc. */}
+    <img src={project.image} alt={project.title} />
+    <h3>{project.title}</h3>
+    <p>{project.description}</p>
+    {/* ... more card details ... */}
+  </div>
+))}
              
     </section>
   );
