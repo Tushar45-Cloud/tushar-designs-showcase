@@ -37,15 +37,15 @@ const AboutSection = () => {
           {/* Experience Stats */}
           <div className="grid md:grid-cols-3 gap-8 mt-16 text-center">
             <div className="portfolio-card">
-              <div className="text-3xl font-bold text-primary mb-2">3+</div>
+              <div className="text-3xl font-bold text-primary mb-2">1</div>
               <div className="text-muted-foreground">Years Experience</div>
             </div>
             <div className="portfolio-card">
-              <div className="text-3xl font-bold text-primary mb-2">50+</div>
+              <div className="text-3xl font-bold text-primary mb-2">10+</div>
               <div className="text-muted-foreground">Projects Completed</div>
             </div>
             <div className="portfolio-card">
-              <div className="text-3xl font-bold text-primary mb-2">25+</div>
+              <div className="text-3xl font-bold text-primary mb-2">10+</div>
               <div className="text-muted-foreground">Happy Clients</div>
             </div>
           </div>

@@ -34,7 +34,7 @@ const ContactSection = () => {
     {
       name: 'Email',
       icon: <Mail size={24} />,
-      url: 'mailto:tushar.bansode@gmail.com',
+      url: 'mailto:tusharbansode383@gmail.com',
       color: 'hover:text-red-500'
     },
     {
@@ -70,7 +70,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Email</p>
-                      <p className="text-muted-foreground">tushar.bansode@gmail.com</p>
+                      <p className="text-muted-foreground">tusharbansode383@gmail.com</p>
                     </div>
                   </div>
 
@@ -80,7 +80,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Phone</p>
-                      <p className="text-muted-foreground">+91 9876543210</p>
+                      <p className="text-muted-foreground">+91 9923557321</p>
                     </div>
                   </div>
 

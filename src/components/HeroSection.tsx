@@ -11,9 +11,7 @@ const HeroSection = () => {
       try {
         setIsProcessing(true);
         const img = await loadImage('/lovable-uploads/ed402eae-b96c-42b7-9a8e-10fece6d48e1.png');
-        const blob = await createWhiteBackground(img);
-        const url = URL.createObjectURL(blob);
-        setProcessedImageUrl(url);
+       
       } catch (error) {
         console.error('Failed to process image:', error);
         // Keep original image on error
