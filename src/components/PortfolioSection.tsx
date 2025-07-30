@@ -16,45 +16,36 @@ const PortfolioSection = () => {
     { id: 'logos', name: 'Logos', icon: <Palette size={20} /> },
   ];
 
-  const projects = [
-    {
-      id: 1,
-      title: 'Laundry Service Website',
-      category: 'web',
-      image: '/lovable-uploads/94f34cc6-4dea-49de-8f7f-b1f12746339c.png',
-      description: 'Modern Website platform with clean UI and seamless user experience',
-      tools: ['Figma', 'Prototyping', 'User Research'],
-      workLink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=452-156&t=V6aWwByHQK9JBDOc-1"
-    },
-    {
-      id: 2,
-      title: 'E Commers Website',
-      category: 'mobile',
-      image: portfolioMobile,
-      description: 'Intuitive banking app with focus on security and usability',
-      tools: ['Mobile UI', 'UX Design', 'Prototyping'],
-       workLink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=477-1069&t=V6aWwByHQK9JBDOc-1"
-    },
-    {
-      id: 3,
-      title: 'Quiz App',
-      category: 'logos',
-      image: portfolioLogos,
-      description: 'Collection of modern brand identities and logo designs',
-      tools: ['Branding', 'Logo Design', 'Identity Systems'],
-      workLink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=394-156&t=V6aWwByHQK9JBDOc-1"
-    },
-    {
-      id: 4,
-      title: 'Hotel management App and admin Dashboard',
-      category: 'web',
-      image: portfolioWeb,
-      description: 'Analytics dashboard with complex data visualization',
-      tools: ['Web Design', 'Data Viz', 'UX Research'],
-       workLink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=158-833&t=V6aWwByHQK9JBDOc-1"
-    },
-    
-  ];
+// ...existing code...
+const projects = [
+  {
+    id: 1,
+    title: 'Laundry Service Website',
+    category: 'web',
+    image: '/lovable-uploads/94f34cc6-4dea-49de-8f7f-b1f12746339c.png',
+    description: 'Modern Website platform with clean UI and seamless user experience',
+    tools: ['Figma', 'Prototyping', 'User Research'],
+    workLink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=452-156&t=V6aWwByHQK9JBDOc-1"
+  },
+  {
+    id: 2,
+    title: 'E Commers Website',
+    category: 'mobile',
+    image: portfolioMobile,
+    description: 'Intuitive banking app with focus on security and usability',
+    tools: ['Mobile UI', 'UX Design', 'Prototyping'],
+    workLink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=477-1069&t=V6aWwByHQK9JBDOc-1"
+  },
+  {
+    id: 3,
+    title: 'Quiz App',
+    category: 'logos',
+    image: portfolioLogos,
+    description: 'Collection of modern brand identities and logo designs',
+    tools: ['Branding', 'Logo Design', 'Identity Systems'],
+    workLink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=394-156&t=V6aWwByHQK9JBDOc-1"
+  },
+  {
 
   const filteredProjects = activeCategory === 'all' 
     ? projects 
