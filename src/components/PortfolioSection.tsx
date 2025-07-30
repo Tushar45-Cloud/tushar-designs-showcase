@@ -24,7 +24,7 @@ const PortfolioSection = () => {
       image: '/lovable-uploads/94f34cc6-4dea-49de-8f7f-b1f12746339c.png',
       description: 'Modern Website platform with clean UI and seamless user experience',
       tools: ['Figma', 'Prototyping', 'User Research'],
-      worklink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=452-156&t=V6aWwByHQK9JBDOc-1"
+      workLink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=452-156&t=V6aWwByHQK9JBDOc-1"
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ const PortfolioSection = () => {
       image: portfolioMobile,
       description: 'Intuitive banking app with focus on security and usability',
       tools: ['Mobile UI', 'UX Design', 'Prototyping'],
-       worklink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=477-1069&t=V6aWwByHQK9JBDOc-1"
+       workLink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=477-1069&t=V6aWwByHQK9JBDOc-1"
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ const PortfolioSection = () => {
       image: portfolioLogos,
       description: 'Collection of modern brand identities and logo designs',
       tools: ['Branding', 'Logo Design', 'Identity Systems'],
-      worklink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=394-156&t=V6aWwByHQK9JBDOc-1"
+      workLink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=394-156&t=V6aWwByHQK9JBDOc-1"
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ const PortfolioSection = () => {
       image: portfolioWeb,
       description: 'Analytics dashboard with complex data visualization',
       tools: ['Web Design', 'Data Viz', 'UX Research'],
-       worklink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=158-833&t=V6aWwByHQK9JBDOc-1"
+       workLink: "https://www.figma.com/design/yKfymYbMShVs2MQGNxpUxP/Untitled?node-id=158-833&t=V6aWwByHQK9JBDOc-1"
     },
     
   ];
