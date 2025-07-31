@@ -55,7 +55,7 @@ const PortfolioSection = () => {
             key={project.id}
             className="portfolio-card group overflow-hidden"
           >
-            <div className="relative overflow-hidden rounded-lg mb-4">
+           <div className="relative overflow-hidden rounded-lg mb-4">
   <img
     src={project.image}
     alt={project.title}
@@ -66,13 +66,14 @@ const PortfolioSection = () => {
       href={project.workLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-white text-black px-4 py-2 rounded-lg flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+      className="bg-white text-black px-4 py-2 rounded-lg flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 z-20"
     >
       <ExternalLink size={16} />
       View Work
     </a>
   </div>
 </div>
+
 
 
             <h3 className="font-semibold text-gray-900 mb-2">{project.title}</h3>
