@@ -55,21 +55,28 @@ const PortfolioSection = () => {
             key={project.id}
             className="portfolio-card group overflow-hidden"
           >
-           <div className="relative overflow-hidden rounded-lg mb-4">
+           <div className="relative overflow-hidden rounded-lg mb-4 group">
+  {/* Make the image non-interfering */}
   <img
     src={project.image}
     alt={project.title}
-    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110 z-0"
+    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110 pointer-events-none"
   />
+
+  {/* Overlay with button */}
   <div className="absolute inset-0 z-10 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
     <a
       href={project.workLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-white text-black px-4 py-2 rounded-lg flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 z-20"
+      className="z-20 bg-white text-black px-4 py-2 rounded-lg flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
     >
       <ExternalLink size={16} />
       View Work
+    </a>
+  </div>
+</div>
+
     </a>
   </div>
 </div>
